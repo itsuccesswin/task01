@@ -1,0 +1,27 @@
+version: '3'
+services:
+  dev-jenkins-teama:
+    build:
+      context: ./DEV
+      dockerfile: Dockerfile
+    ports:
+     - "8080:8080"
+     - "50000:50000"
+
+  stage-jenkins-teama:
+    build:
+      context: ./STAGE
+      dockerfile: Dockerfile
+    ports:
+     - "8081:8081"
+     - "50001:50001"
+
+  prod-jenkins-teama:
+    build:
+      context: ./PROD
+      dockerfile: Dockerfile
+    ports:
+     - "8082:8082"
+     - "50002:50002"
+
+    

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  dev-jenkins-teamb:
+    build:
+      context: ./DEV
+      dockerfile: Dockerfile
+    ports:
+     - "8083:8083"
+     - "50003:50003"
+
+  stage-jenkins-teamb:
+    build:
+      context: ./STAGE
+      dockerfile: Dockerfile
+    ports:
+     - "8084:8084"
+     - "50004:50004"
+
+  prod-jenkins-teamb:
+    build:
+      context: ./PROD
+      dockerfile: Dockerfile
+    ports:
+     - "8085:8085"
+     - "50005:50005"
+
+    
