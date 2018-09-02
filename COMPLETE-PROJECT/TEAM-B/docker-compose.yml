@@ -5,23 +5,23 @@ services:
       context: ./DEV
       dockerfile: Dockerfile
     ports:
-     - "8083:8083"
-     - "50003:50003"
+     - "8083:8080"
+     - "50003:50000"
 
   stage-jenkins-teamb:
     build:
       context: ./STAGE
       dockerfile: Dockerfile
     ports:
-     - "8084:8084"
-     - "50004:50004"
+     - "8084:8080"
+     - "50004:50000"
 
   prod-jenkins-teamb:
     build:
       context: ./PROD
       dockerfile: Dockerfile
     ports:
-     - "8085:8085"
-     - "50005:50005"
+     - "8085:8080"
+     - "50005:50000"
 
     
