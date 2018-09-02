@@ -13,15 +13,15 @@ services:
       context: ./STAGE
       dockerfile: Dockerfile
     ports:
-     - "8081:8081"
-     - "50001:50001"
+     - "8081:8080"
+     - "50001:50000"
 
   prod-jenkins-teama:
     build:
       context: ./PROD
       dockerfile: Dockerfile
     ports:
-     - "8082:8082"
-     - "50002:50002"
+     - "8082:8080"
+     - "50002:50000"
 
     
